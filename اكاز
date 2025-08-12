@@ -1,0 +1,72 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log('البوت جاهز!');
+});
+
+client.on('message', (message) => {
+  if (message.author.bot) return;
+
+  // الأوامر الأساسية
+  if (message.content === '.اوامر') {
+    const embed = new Discord.MessageEmbed()
+      .setTitle('قائمة الأوامر')
+      .addField('.فلوسي', 'عرض رصيدك')
+      .addField('.رانك', 'عرض مستواك')
+      .addField('.بحث [نص]', 'بحث في اليوتيوب')
+      .addField('.سرقه @منشن', 'جرب حظك (60% نجاح)')
+      .addField('.شغل [أغنية]', 'تشغيل موسيقى');
+    message.channel.send(embed);
+  }
+
+  // الألعاب والتحديات
+  if (message.content === '.فكك') {
+    // كود لعبة تفكيك الكلمات
+  }
+  if (message.content === '.جمع') {
+    // كود لعبة تجميع الحروف
+  }
+  if (message.content === '.لغز') {
+    // كود ألغاز ذكائية
+  }
+  if (message.content === '.روليت') {
+    // كود روليت روسي
+  }
+  if (message.content === '.xo') {
+    // كود لعبة XO
+  }
+  if (message.content === '.صوره') {
+    // كود تخمين الشخصية
+  }
+
+  // النظام البنكي
+  if (message.content === '.بنك') {
+    // كود حسابك البنكي
+  }
+  if (message.content === '.سحب') {
+    // كود سحب أموال
+  }
+  if (message.content === '.ايداع') {
+    // كود إيداع أموال
+  }
+  if (message.content === '.تحويل') {
+    // كود تحويل فلوس
+  }
+
+  // قاتل الشياطين
+  if (message.content === '.قاتل الشياطين') {
+    // كود قاتل الشياطين
+  }
+  if (message.content === '.متجر الحداد') {
+    // كود متجر الحداد
+  }
+  if (message.content === '.الترقيات في قاتل الشياطين') {
+    // كود الترقيات في قاتل الشياطين
+  }
+  if (message.content === '.متجر') {
+    // كود متجر
+  }
+});
+
+client.login('YOUR_BOT_TOKEN');
